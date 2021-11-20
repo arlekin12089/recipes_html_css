@@ -1,0 +1,664 @@
+
+/*Reset styles*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fffcf2;
+}
+ul {
+  list-style-type: none;
+}
+
+/*Header*/
+.header {
+  position: relative;
+}
+.hero__wrap {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 600px;
+  padding: 5rem 15px;
+  background: url(../styles/img/background-home.jpg) center/cover no-repeat;
+}
+.hero__wrap.persimmon {
+  background: url(../styles/img/persimmon_muffins.jpg) center/cover no-repeat;
+  align-items: center;
+  height: 350px;
+  padding: 3rem;
+}
+.hero__wrap.cheesecake {
+  background: url(../styles/img/pumpking_cheesecake.png) center/cover no-repeat;
+  align-items: center;
+  height: 350px;
+  padding: 3rem;
+}
+.hero__wrap.mac-cheese {
+  background: url(../styles/img/mac-n-cheese-recipes.jpg) center/cover no-repeat;
+  align-items: center;
+  height: 350px;
+  padding: 3rem;
+}
+.hero__wrap.persimmon::before,
+.hero__wrap.cheesecake::before,
+.hero__wrap.mac-cheese::before {
+  height: 350px;
+}
+.hero__wrap::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  height: 600px;
+}
+.hero__about {
+  margin: 0 auto;
+  color: #fff;
+}
+.hero__more {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0;
+}
+.hero__more a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+.hero__more span {
+  animation: bounce 3s infinite;
+  padding-top: 10px;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+}
+.header__logo-container {
+  position: relative;
+  height: 145px;
+  width: 280px;
+  margin: 0 auto 45px;
+  z-index: 9;
+}
+
+.header__logo-laptop {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: 0;
+}
+.header__logo-laptop--screen {
+  width: 160px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px 10px 0px 0px;
+  padding: 9px;
+  border: 1px solid #ccc;
+  background-color: black;
+}
+.header__logo-laptop--bottom {
+  width: 220px;
+  height: 12px;
+  background: #ccc;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0px 0px 6px 6px;
+}
+.header__logo-cup {
+  animation-name: serve;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+.header__logo-cup .mug {
+  position: absolute;
+  background: #50c878;
+  height: 50px;
+  width: 55px;
+  bottom: 0;
+  left: 10px;
+  border-radius: 2px 2px 15px 15px;
+  border: 2px solid #565254;
+}
+
+.header__logo-cup .mug::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 4px;
+  height: 24px;
+  width: 24px;
+  background: #50c878;
+  z-index: -13;
+  border-radius: 100%;
+  border: 2px solid #666;
+}
+.header__logo-laptop--cover {
+  display: block;
+  height: 100%;
+  position: relative;
+  top: 0;
+  background-color: #9da0ba;
+  width: 100%;
+  text-align: center;
+}
+.header__logo-laptop--cover img {
+  width: 56px;
+  margin-top: 13px;
+  height: auto;
+}
+.header__logo-steam {
+  position: absolute;
+  top: 108px;
+  left: 18px;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  z-index: -1;
+  opacity: 0;
+}
+.header__logo-steam div {
+  height: 30px;
+  width: 10px;
+  background: #fafafa;
+  border-radius: 10px 0px 10px 0px;
+}
+.header__logo-steam.steam {
+  position: absolute;
+  top: 98px;
+  left: 17px;
+  width: 45px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  z-index: -1;
+  opacity: 0;
+  animation: steam 2s linear infinite;
+}
+
+@keyframes steam {
+  20% {
+    opacity: 0.4;
+  }
+
+  35% {
+    top: 100px;
+    opacity: 0.4;
+  }
+
+  70% {
+    top: 70px;
+    opacity: 0;
+  }
+}
+
+/*Headings*/
+h1 {
+  font-size: 4em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #000;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Oswald", sans-serif;
+}
+
+/*Main*/
+.main {
+  padding: 5rem 0;
+}
+.main.page li {
+  margin-bottom: 15px;
+}
+.main.page h2 {
+  margin-bottom: 30px;
+}
+.main.page .aside,
+.main.page .process {
+  background: #fff;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 6%);
+  border-radius: 5px;
+  padding: 15px;
+}
+.main.page .aside {
+  flex-basis: 100%;
+  margin-right: 20px;
+}
+.main.page .process {
+  padding: 15px 35px;
+}
+.main.page .cooking {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+}
+.recipes {
+  display: grid;
+  grid-gap: 2rem 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+.recipes__cover {
+  height: 260px;
+}
+.recipes__entry {
+  display: grid;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 6%);
+}
+.recipes__entry > * {
+  display: flex;
+  flex-direction: column;
+}
+.recipes__caption {
+  margin-top: 20px;
+  padding: 0 15px 15px;
+}
+.recipes__caption ul {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipes__caption ul li {
+  flex: 1;
+}
+
+.recipes__icon i {
+  font-size: 28px;
+}
+.recipes__value {
+  color: #50c878;
+  margin-left: 0.35em;
+  vertical-align: bottom;
+  font-size: 24px;
+  font-weight: 600;
+}
+.recipes__title {
+  display: block;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.recipes__caption p {
+  letter-spacing: 0.05rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
+.recipes__more {
+  display: inline-flex;
+  margin-top: auto;
+}
+.more-recipes {
+  margin-top: 1.5rem;
+}
+.more-recipes ul {
+  display: flex;
+}
+.more-recipes ul li {
+  position: relative;
+  width: 33.33333%;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 300px;
+  margin-bottom: 40px;
+}
+.more-recipes__wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.more-recipes__wrap::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.more-recipes__wrap a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+
+.more-recipes__wrap a:hover {
+  color: #50c878;
+}
+.more-recipes-text {
+  font-size: 1.475rem;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+.fact {
+  box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 20%);
+  padding: 10px;
+  border-radius: 5px;
+  background: #ffefcb;
+  margin: 30px 0;
+}
+/*Footer*/
+.footer {
+  background: #000000;
+  padding: 30px 0;
+  text-align: center;
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 0.7em 2em;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  font-size: 1rem;
+  color: #fff;
+  background: #50c878;
+  display: inline-block;
+}
+.btn:hover {
+  background: #4c9665;
+}
+
+.link {
+  text-decoration: underline;
+  color: #50c878;
+  font-weight: 500;
+}
+.link:hover {
+  text-decoration: none;
+}
+
+b {
+  font-weight: 600;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  .header__logo-container {
+    zoom: 0.8;
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .hero__wrap,
+  .hero__wrap::before {
+    height: 540px;
+  }
+  .hero__wrap {
+    padding: 2rem 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+  }
+  .recipes {
+    padding: 0 20px;
+  }
+   .hero__wrap {
+    padding: 5rem 15px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 4em;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .recipes {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+  }
+  .more-recipes ul {
+    flex-direction: column;
+  }
+  .more-recipes ul li {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .recipes {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  .more-recipes ul {
+    flex-direction: column;
+  }
+  .more-recipes ul li {
+    width: 100%;
+  }
+  .main.page .cooking {
+    flex-direction: column;
+  }
+  .main.page .aside {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.7em;
+  }
+  .header__logo-container {
+    zoom: 0.7;
+  }
+  h2 {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+  .main {
+    padding: 2rem 0;
+  }
+  .more-recipes-text {
+    font-size: 1.2rem;
+  }
+}
